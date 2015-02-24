@@ -20,7 +20,10 @@ object SparkEventLogParseSample {
     }
 
     def wordCount() = {
-		val conf = new SparkConf().set("spark.eventLog.enabled", "true")
+		val conf = new SparkConf()
+			.set("spark.eventLog.enabled", "true")
+			.set("spark.files.overwrite","true")
+
 		val sc = new SparkContext("local", "SparkEventLogParseSample", conf)
 
 		val file = sc.textFile("word-count-target.txt")
