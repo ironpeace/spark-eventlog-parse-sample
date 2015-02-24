@@ -1,0 +1,5 @@
+exit
+run
+run WordCount
+run
+run EventLogParser /tmp/spark-events/sparkeventlogparsesample-1424771678078/EVENT_LOG_1
